@@ -1,0 +1,42 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 29, 2018, 11:20:54 AM
+    Author     : Michael_Buranov
+*/
+
+.productDescText {
+/*  background: #ddd; */
+  width: 100%;
+/*  padding: 20px; */
+}
+
+.productDescriptionCard {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  overflow: auto;
+}
+
+/* Left column */
+.leftDescriptionColumn {   
+  float: left;
+  width: 20%;
+}
+
+/* Right column */
+.rightDescriptionColumn {
+  float: left;
+  width: 80%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftDescriptionColumn, .rightDescriptionColumn{   
+    width: 100%;
+  }
+}
