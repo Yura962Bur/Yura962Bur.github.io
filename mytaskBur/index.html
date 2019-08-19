@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<meta charset="UTF-8">
+			<link rel="stylesheet" href="styles.css">
+	
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+			<script src="Behav-2.js" type="text/javascript"></script>  
+			
+	</head>
+	<body onload=" calcSum(); btn(); checkSelection()">
+		<h1 style="visibility: hidden;"> Добро пожаловать!</h1>
+		
+		<form class="center" action="introduce.php" method="post">
+			<div>
+				<h2>Заказать набор</h2>
+			</div>
+			
+			<div class="center">
+				<p>Длина забора</p> 
+				
+				<div style="display: flex; width:60%; position:relative; left: 25%;">
+					<input type="text" 
+						oninput=" calcSum(); btn(); checkNumber(this,'lengthErrMsg', 'lengthMtDesc','lengthOK')" 
+						name="fencingLength" value="0" 
+						style="width:55%; margin:0%;"
+					/> 
+					<span id="lengthMtDesc" style="margin:0%; width:35%; align-self: center"> метров </span> 
+					<span id="lengthOK" class="fa fa-chevron-down" style="font-size:15px; color: #00ff00;  width:5%; align-self: center"/>
+				</div>	
+				<p id="lengthErrMsg" style="text-align: left; font-size: 12px; color: red; position:relative; left: 25%;"></p>
+			</div>
+			
+			<div class="center">
+				<p>Высота забора</p> 
+				<div style="display: flex; width:60%; position:relative; left: 25%;">
+					<input type="text" 
+						oninput="calcSum();  btn(); checkNumber(this,'heightErrMsg', 'heightMtDesc','heightOK')" 
+						name="fencingHeight" value="0" 
+						style="width:55%; margin:0%;"
+					/> 
+					<span id="heightMtDesc" style="margin:0%; width:35%; align-self: center"> метров </span> 
+					<span id="heightOK" class="fa fa-chevron-down" style="font-size:15px; color: #00ff00;  width:5%; align-self: center"/>
+				</div>
+				<p id="heightErrMsg" style="text-align: left; font-size: 12px; color: red; position:relative; left: 25%;"></p>
+
+			</div>
+			
+			<div class="center">
+				<p>Материал забора</p>
+				
+				<div style="display: flex; width:60%; position:relative; left: 25%;">
+					<select name="material" onchange="calcSum();  btn(); checkSelection(); " style="width:90%; margin:0%;">
+						<option value="0">Выберите материал</option>
+						<option value="1">Профнастил 400₽ за м2</option>
+						<option value="2">Модули 500₽ за м2 </option>
+						<option value="3">Бетон 700₽ за м2 </option>
+						<option value="4">Сетка 200₽ за м2 </option>
+					</select> 
+					
+					<span class="fa fa-chevron-down" id="materialOK"
+						style="font-size:15px; color: #00ff00;  width:10%; align-self: center"></span>
+				
+				</div>
+
+				<p style="text-align: left; position:relative; left: 25%; height: 12px;">
+					<label >
+						<input type="checkbox" onchange="calcSum(); sum=getSumValue(calcSum());" name="needInstall" value = "yes" style="height: 12px;"> 
+						Нужен монтах
+					</label>
+				</p>
+			</div>				
+			
+			<p id="sum" name="sum" style="font-size:28px;">Сумма заказа:</p>
+			<input type="submit" name="then" value="Далее" class="then" />
+		</form>
+	</body>
+	<script>
+	
+
+	function isSubmitEnable(){
+			
+			const l = document.getElementsByName("fencingLength")[0];
+			const h = document.getElementsByName("fencingHeight")[0];
+			const m = document.getElementsByName("material")[0].value;				
+
+			if (isNumber(l.value) && isNumber(h.value) && (m>0)) {
+				return true;
+			}
+			return false;
+
+		}
+
+		function btn(){
+			bt = document.getElementsByName("then")[0]
+			bt.disabled=true;	
+			bt.style.background = "gray";		
+			if (isSubmitEnable()) {
+				bt.disabled=false;	
+				bt.style.background = "#008CBA";			
+			}
+		}
+
+		function calcSum() {
+			const materialSum = [0, 400, 500, 700, 200];
+
+			const l = document.getElementsByName("fencingLength")[0].value;
+			const h = document.getElementsByName("fencingHeight")[0].value;			
+			const m = document.getElementsByName("material")[0].value;	
+			const e = document.getElementsByName("needInstall")[0].checked;
+
+			const sq = Number(l)*Number(h);
+			let s = sq*materialSum[m]+(e ? sq*200 : 0 );
+
+			s = isNaN(s) ? "---" : s;
+			s = m==0 ? "---": s;
+
+			document.getElementById("sum").innerHTML="Сумма заказа: " + s;
+		}
+		
+		function checkNumber(ctrl, errMsgCtrl, MtDescCtrl, isOK){
+
+			let msg = "";
+			document.getElementById(isOK).style.display = "block";
+			if (isNaN(Number(ctrl.value)) || ctrl.value.trim().length==0) {
+				msg = "Введите число";
+				document.getElementById(isOK).style.display = "none";
+			}
+			document.getElementById(errMsgCtrl).innerHTML = msg;
+
+			if (MtDescCtrl) {
+				document.getElementById(MtDescCtrl).innerHTML = getMetrDesc(ctrl.value);
+			}
+		}
+
+		
+		function checkSelection (){
+			const m = document.getElementsByName("material")[0].value;	
+			document.getElementById("materialOK").style.display = "block";
+
+			if (m==0) {
+				document.getElementById("materialOK").style.display = "none";
+			}		
+		}
+
+	</script>
+</html>
