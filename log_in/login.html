@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }        
+        .allWindow {
+            /*border: 1px solid rgb(32, 29, 182);*/
+            width: 99vw;
+            height: 98vh;
+
+            background-image: url(background@2x.jpg);
+            background-repeat:  no-repeat;   
+            background-size:  cover;   
+
+            position:relative;      
+        }
+        .logo{
+            /*border: 1px solid black;*/
+
+            position:absolute;
+            top:13%;
+            height:6.4%; 
+            width: 16.4%;
+            left:41.6%;
+
+            background-image: url(w-mercury-development@3x.png);
+            background-repeat: no-repeat;  
+            background-size:  contain;  
+        }
+
+        .loginBox{
+            /*border: 1px solid black;*/
+
+            position:absolute;
+            top: 31.04%;
+            height: 37.9%; 
+            width: 31.25%; 
+            left:34.37%;
+
+            border-radius: 8px;
+            box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+
+        }
+
+        #loginBox2{
+            position:absolute;
+            top: 27.99%;
+            height: 38.37%; 
+            width: 31.25%; 
+            left:34.37%;
+
+            border-radius: 8px;
+            box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;  
+
+            display: none;                        
+        }
+
+        .caption {
+ 
+            opacity: 0.8;
+            font-family: Gotham;
+            font-size: 24px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.2px;
+            text-align: center;
+            color: #262626;     
+    
+            position:absolute;
+            top:11.73%;
+            left:35%;
+            width: 30%;
+            height: 29px;
+            /*border: 1px solid black;*/
+        }
+        
+        .input{
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            background-color: #f1f1f1;
+          
+        }
+
+        .input:focus{
+            border: solid 1px rgba(151, 151, 151, 0.25);    
+            color: #262626;        
+        }
+
+        .inputdivMail{
+            top: 30%;
+            left: 8%;
+            width: 84%;   
+            height: 11.73%;         
+            position:absolute;
+        }
+
+        .inputdivPSW{
+            top: 50.12%;
+            left: 8%;
+            width: 84%;             
+            height: 11.73%;           
+            position:absolute;
+        }
+
+        #errorMsg{
+            width: 83.83%;
+            height: 8.32%;
+            left: 8%;
+            top: 59.25%;
+
+            position:absolute;
+
+            border-radius: 4px;
+            background-color: rgba(237, 65, 89, 0.25);            
+
+            font-family: Gotham;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            color: #ed4159; 
+
+            /*border: 1px solid black;    */
+            display: none;  
+            padding:1.5%;     
+        }
+
+        .btn{
+            height: 11.73%;
+            bottom: 14.67%;
+            left: 37.83%;
+            width: 24.33%;
+            position:absolute;
+        }
+
+        .send {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            box-shadow: 0 4px 16px 0 rgba(237, 65, 89, 0.4);
+            background-color: #ed4159;
+
+
+            font-family: Gotham;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: center;
+            color: #ffffff;      
+        }
+
+        .send:hover{
+            box-shadow: 0 6px 20px 0 rgba(237, 65, 89, 0.4);
+            background-color: #ffffff;   
+
+            color: #ed4159;         
+        }
+
+        .send:active{
+            box-shadow: 0 2px 10px 0 rgba(237, 65, 89, 0.5);
+            background-color: #ffffff;   
+
+            color: #ed4159;                        
+        }
+
+        #box2Photo{
+            width: 21.33%; 
+            height: 30.92%;   
+            border-radius: 50%;
+            border: 1px solid black; 
+                 
+
+            position:absolute;
+            top:11.59%;
+            left: 39.33%;
+
+            background-size:100% 100%
+
+        }
+
+        #box2Caption{
+            position: absolute;
+            top:52.17%;
+            left: 20%;
+            width:60%;
+            
+            opacity: 0.8;
+            font-family: Gotham;
+            font-size: 28px;
+            font-weight: bold;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: 0.23px;
+            text-align: center;
+            color: #262626;
+        }
+        #box2Button {
+            position: absolute;
+            top:73.91%;
+            height: 11.59%;
+            left: 37.17%;
+            width:25.67%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .logo {
+                height:7.04%;
+                width: 56.87%;
+                left: 21.56%;
+                top:7.67%;
+            }
+            .loginBox {
+                top: 21.12%;
+                left: 5%;
+                width: 90%;
+                height: 60.56%;
+            }
+            .caption{
+                width: 22.57%;
+                height: 6.97%;  
+                top:9.3%;   
+                left:38.54%;                         
+
+                font-size: 20px;  
+            }
+
+            .inputdivMail{
+                top:25.58%;
+
+                height: 13.95%;
+                width: 83.33%;
+                left:8.33%;
+            }
+
+            .inputdivPSW{
+                top:46.21%;
+
+                height: 13.95%;
+                width: 83.33%;
+                left:8.33%;
+            }
+
+            .input {
+                border: solid 1px rgba(151, 151, 151, 0.25);
+            }
+
+            .btn{
+                height: 13.95%;
+                bottom: 13.95%;
+                left: 24.65%;
+                width: 50.34%;
+            }
+
+            #errorMsg{
+                width: 83.83%;
+                height: 9.8%;
+                left: 8.33%;
+                padding:4.6%;
+                top:56.86%;
+
+            }
+
+            #loginBox2{
+                top:21.13%;
+                height: 52.64%;
+                width: 90%;
+                left:5%;
+            }
+
+            #box2Photo{
+                top:10.7%;
+                left:35.07%;
+                width:29.86%;
+            }
+
+            #box2Caption{
+                top:47.49%;
+            }
+
+            #box2Button{
+                top: 67.89%;
+                height: 16.05%;
+                left: 23.26%;
+                width:53.47%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="allWindow">
+        <div class="logo"> </div>
+        <div class="loginBox" id="loginBox">
+            <div class="caption" id="caption">Log in</div>
+            <div class="inputdivMail" id="inputdivMail" >
+                <input type="text" id="email" class="input" placeholder="E-Mail" value="user@example.com"/>             
+            </div>
+            <div class="inputdivPSW" id="inputdivPSW">
+                <input type="text" id="psw" class="input" placeholder="Password" value="mercdev"/>
+            </div>
+            <div id="errorMsg">
+
+            </div>
+            <div class="btn" id="btn">
+                <input type="button" class="send" value="Login" onclick="tryLogin();"/>
+            </div>
+        </div>
+        <div id="loginBox2">
+            <div id="box2Photo"></div>
+            <div id="box2Caption">---</div>
+            <div id="box2Button">
+                <input type="button" class="send" value="Logout"/>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+
+        function showError(r){
+            errDiv = document.getElementById("errorMsg");
+            errDiv.innerHTML=r.error;
+            errDiv.style.display = "block";	
+
+            loginBox = document.getElementById("loginBox");
+            caption = document.getElementById("caption");
+            email = document.getElementById("inputdivMail");
+            email_ = document.getElementById("email");            
+            psw = document.getElementById("inputdivPSW");
+            btn = document.getElementById("btn");
+
+            email_.style.border="solid 1px #ed4159";
+            email_.style.color="#ed4159";
+
+            if (screen.width>800) {
+                // При ошибке форма разъезжается вниз, меняем все пропорции
+                loginBox.style.height="44.58%";
+
+                caption.style.top="9.98%";
+
+                email.style.top="26%";
+                email.style.height="9.99%";
+
+                psw.style.top="42.62%";
+                psw.style.height="9.99%";
+
+                btn.style.bottom="12.47%";
+                btn.style.height="9.98%";
+            } else {
+                // При ошибке форма разъезжается вниз, меняем все пропорции
+                loginBox.style.height="71.83%";
+
+                caption.style.top="7.84%";                
+
+                email.style.top="21.57%";
+                email.style.height="11.76%";
+
+                psw.style.top="39.21%";
+                psw.style.height="11.76%";
+
+                btn.style.bottom="11.76%";
+                btn.style.height="11.76%";
+            }
+        }
+
+
+        function showPhoto(r){
+            loginBox = document.getElementById("loginBox");
+            loginBox.style.display = "none";
+
+            loginBox2 = document.getElementById("loginBox2");
+            loginBox2.style.display = "block";
+
+
+            box2Photo = document.getElementById("box2Photo");
+            box2Photo.style.backgroundImage ="url('"+r.photoUrl+"')";
+
+            console.log(box2Photo.style.backgroundImage);
+
+            box2Caption = document.getElementById("box2Caption");
+            box2Caption.innerHTML=r.name;
+
+        }
+
+        function tryLogin(){
+            const l = document.getElementById("email").value;
+            const p = document.getElementById("psw").value;
+            const o = JSON.stringify({email: l, password: p});
+    
+            console.log (o);
+    
+            let xhttp = new XMLHttpRequest();
+            
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 ) {
+                    let r =  JSON.parse(this.responseText);
+                    console.log(r);
+                    if (this.status == 200) {
+                        showPhoto(r);
+                    } else  {
+                        showError(r);
+                    }
+                }
+            };
+            xhttp.open("POST", "https://us-central1-mercdev-academy.cloudfunctions.net/login");
+            xhttp.setRequestHeader("Content-type", "application/json");
+            xhttp.send(o);
+    
+        }
+    </script>
+</html>
