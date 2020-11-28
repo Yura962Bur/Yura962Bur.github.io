@@ -1,0 +1,641 @@
+@import "mixins"
+
+*
+	font-family: Roboto, Helvetica, Verdana, sans-serif
+
+header
+	position: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	width: 100%
+	min-height: 134px
+	background-color: #131B40
+	z-index: 100
+	a
+		color: #fff
+	.logo
+		width: 100%
+		height: auto
+		background: url('../images/logo.png') left/90% no-repeat
+	.social
+		@include social
+		flex-wrap: wrap
+		&__item
+			@include icon
+			margin: 5px
+			border-radius: 50%
+		.vk
+			@include vk
+		.instagram
+			@include instagram
+		.facebook
+			@include facebook
+		.ok
+			@include ok
+		.telegram
+			@include telegram
+		.viber
+			@include viber
+
+	.info
+		display: flex
+		justify-content: center
+		align-items: flex-end
+		flex-direction: column
+		&__mail
+			display: flex
+			font-weight: 700
+			.icon
+				color: #fff
+				margin: 0 10px 0 0
+		
+	.menu
+		display: flex
+		justify-content: center
+		align-items: center
+		color: #fff
+		font-weight: 400
+
+.promo 
+	&__wrapper
+		padding: 134px 30px 30px 30px
+	.title 
+		@include title
+		text-align: center
+	&__subtitle
+		margin: 0 0 45px 0  
+		font-weight: 400
+		font-size: 22px
+		line-height: 1.37
+		text-align: center
+
+	.subscribe 
+		background-color: #131b40
+		color: #fff
+		text-align: center
+		padding: 30px
+		text-align: start
+		border-radius: 6px
+
+		&__descr
+			font-size: 14px
+		
+		.label
+			font-size: 16px
+			line-height: 1.375
+			padding: 20px 0 0px 0
+			font-weight: 500
+			text-align: left
+
+		&__field
+			input[type="text"], input[type="email"] 
+				width: 100%
+				font-size: 15px
+				font-weight: 400
+				padding: 12px 25px 11px 15px 
+			    	
+		&__submit
+			margin: 30px 0 0 0
+			button
+				@include submit-button		
+		
+	.science 
+
+		&__title
+			font-size: 22px
+			font-weight: 700
+			line-height: 1.37 
+			text-align: center
+
+		&__list 
+		
+
+		&__item
+			margin: 15px 0 0 0
+			display: flex
+			align-items: start
+			justify-content: space-between
+			width: 100%
+			.round
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center
+				margin: 0 15px 0 0
+				flex-shrink: 0
+				width: 3.5em
+				height: 3.5em
+				background-color: #131b40
+				border-radius: 50%
+				img
+					padding: 10px
+					width: 100%
+					border-radius: 0
+			.descr
+				font-size: 16px
+				p
+					margin: 0
+					font-weight: 700
+					line-height: 1.2
+				span
+					display: block
+					margin-top: 5px
+					line-height: 1.37
+					font-weight: 400
+					font-size: 16px
+	
+	.expert
+
+		&__title
+			font-size: 22px
+			font-weight: 700
+			line-height: 1.37 
+			text-align: center
+
+		&__list 
+		
+
+		&__item
+			margin: 15px 0 0 0
+			display: flex
+			align-items: start
+			justify-content: space-between
+			width: 100%
+			.round
+				position: relative
+				display: flex
+				justify-content: center
+				align-items: center
+				margin: 0 15px 0 0
+				flex-shrink: 0
+				width: 3.5em
+				height: 3.5em
+				background-color: #131b40
+				border-radius: 50%
+				img
+					padding: 10px
+					width: 100%
+					border-radius: 0
+			.descr
+				font-size: 16px
+				p
+					margin: 0
+					font-weight: 700
+					line-height: 1.2
+				span
+					display: block
+					margin-top: 5px
+					line-height: 1.37
+					font-weight: 400
+					font-size: 16px
+
+.registration
+	min-height: 485px
+	color: #fff
+	background-color: #131B40
+
+	&__wrapper
+		padding: 80px 0
+	
+		.prereg
+			&__title
+				@include title
+				color: #fff
+				font-size: 29px
+				text-transform: uppercase
+			&__descr
+				margin-top: 20px
+				text-align: justify
+			.social
+				@include social
+				justify-content: flex-start
+				@include social-block
+		.actions
+			&__title
+				@include title
+				color: #fff
+				font-size: 29px
+				text-transform: uppercase
+			&__descr
+				margin-top: 20px
+				text-align: justify
+			&__btn
+				@include submit-button
+
+.about
+	min-height: 620px
+	background-image: url(../images/about-bg.jpg)
+	background-position: 73.06% 29.45%
+	background-size: cover
+	&__wrapper
+		margin: 0
+		padding: 150px 0
+		background: rgba(19, 27, 64, 0.6)
+	.info
+		padding: 40px
+		background: #fff
+	&__title
+		@include title
+	&__descr
+		margin-top: 30px
+		text-align: justify
+		font-weight: 400
+		font-size: 17px
+		line-height: 1.7
+
+
+
+.membership 
+	&__wrapper
+		padding: 70px 0
+
+	.carousel
+		&-indicators
+			li
+				width: 10px
+				height: 10px
+				border-radius: 50%
+				.active
+					width: 10px
+					height: 10px
+		&-control
+			&-prev
+				
+			&-next
+				&-icon
+					transform: rotate(180deg)
+
+
+	.info 
+		margin-top: 35px
+		.title 
+			@include title
+			font-size: 30px
+			text-align: center
+		.descr
+			margin-top: 20px
+			text-align: justify
+			
+	.quote 
+		&__quotation
+			font-size: 24px
+			font-weight: 400
+			line-height: 1.37 
+			text-align: left
+			border-left: 2px solid rgb(27,27,28)
+			padding: 0 20px
+		&__author
+			margin-top: 15px
+			display: flex
+			justify-content: flex-end
+			.round
+				margin: 0px 15px 0px 0px
+				width: 60px
+				height: 60px
+				background: url('../images/main.jpg') center/cover no-repeat
+				background-position: 77.91616766467067% 50%
+				border-radius: 50%
+
+.social-block
+	&__wrapper
+		height: 100px
+		display: flex
+		justify-content: center
+		align-items: center
+		background-color: #131b40
+		.social
+			@include social
+			justify-content: center
+			@include social-block
+
+.gallery
+	&__wrapper
+		padding: 70px 0
+	
+	&__list
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__item
+		width: 100%
+		height: 250px
+		margin: 0 0 30px 0
+		background-repeat: no-repeat
+		background-size: cover
+		.overlay
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 100%
+			height: 100%
+			background: rgba(19,27,64,0.8)
+			text-align: center
+			&__content
+				padding: 30px
+				color: #fff
+	.descr
+		&__title
+			margin-bottom: 5px
+
+.president
+	min-height: 695px
+	background: url('../images/president-bg.jpg') center/cover no-repeat
+	background-position: 58.64% 3.89%
+
+	&__wrapper
+		margin: 0
+		padding: 150px 0
+		background: rgba(19, 27, 64, 0.6)
+
+	.info
+		padding: 30px
+		background-color: #131B40
+		color: #fff
+		
+		.title
+			padding: 10px 0
+			font-size: 30px
+			font-weight: 400
+		.subtitle
+			padding: 10px 0
+			font-size: 22px
+			font-weight: 600
+		.descr
+			font-size: 16px
+			line-height: 1.5
+			text-align: justify
+			strong
+				display: block
+				padding: 10px 0
+				font-size: 18px
+			.social
+				@include social
+				justify-content: flex-start
+				@include social-block
+				&__item
+					width: 2.5em
+					height: 2.5em
+
+.choice
+	&__wrapper
+		padding: 80px 0
+
+	.title
+		margin-bottom: 40px
+		font-size: 48px
+		font-weight: 700
+
+	&__item
+		margin: 15px 0
+		padding: 30px
+		height: 280px
+		background-color: #131B40
+		color: #fff
+		flex-direction: column
+		justify-content: center
+		align-items: center
+
+	&__title
+		padding: 10px 0
+		font-size: 22px
+		font-weight: 700px
+		text-align: center
+
+	.round
+		margin: 0 auto
+		border-radius: 50%
+		width: 5em
+		height: 5em
+		background-color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			width: 3em
+			height: 3em
+
+
+	.descr
+		p
+			text-align: center
+
+
+				
+
+.questions
+	color: #fff
+	background-color: #131B40
+	min-height: 685px
+
+	&__wrapper
+		padding: 70px 0
+
+	&__title
+		font-size: 48px
+		font-weight: 700px
+		text-align: center
+	
+	&__subtitle
+		padding: 10px 0 50px
+		font-size: 22px
+		font-weight: 400
+		text-align: center
+
+	&__list
+		padding: 0px 20px
+		border-radius: 5px
+		color: #000
+		background-color: #fff
+
+		.question
+			display: flex
+			flex-direction: column
+			
+			&__spoiler
+				padding: 15px 0
+				display: flex
+				justify-content: space-between
+
+				.title
+					display: flex
+					align-items: center
+					font-size: 18px
+					font-weight: 500
+					&::before
+						content: url('../images/moan2.png')
+						background-position: 50% 50%
+						margin: 0px 10px 0px 0px
+
+				.btn
+					position: relative
+					font-size: 18px
+					width: 1em
+					height: 1em
+					&::before
+						content: ''
+						position: absolute
+						top: 80%
+						background-color: #000
+						width: 1em
+						height: 2px
+						transition: all .18s
+						transform: translateY(50%)
+
+					&::after
+						content: ''
+						position: absolute
+						left: 80%
+						background-color: #000
+						width: 2px
+						height: 1em
+						transition: all .18s
+						transform: translateX(50%)
+						
+			
+			&__descr
+				display: none
+				padding: 0 0 20px
+				&-active
+					display: block
+					margin: .625em 0 2px
+					padding: 0 0 20px
+					font-size: 16px
+					font-weight: 400
+					line-height: 1.5
+					color: rgb(27, 27, 28)
+
+			.separator
+				height: 1px
+				background-color: #000
+				opacity: .15
+
+.partners
+	min-height: 500px
+	&__wrapper
+		padding: 70px 0
+		.title
+			font-size: 48px
+			font-weight: 700px
+			text-align: center
+		.subtitle
+			padding: 10px 0 50px
+			font-size: 22px
+			font-weight: 400
+			text-align: center
+.swiper
+	&-container 
+		position: relative
+		width: 100%
+		height: 250px
+		display: flex
+		justify-content: center
+		align-items: center
+	
+	&-slide
+		margin: 0px auto
+		padding: 100px
+		display: flex
+		justify-content: center
+		align-items: center
+		img
+			width: 100%
+
+	&-button
+		&-prev
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 2em
+			height: 2em
+			font-size: 25px
+			color: #000
+			border: 2px solid #000
+			border-radius: 50%
+			&::after
+				font-size: 25px
+			&::focus
+				border: none
+				
+		&-next
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 2em
+			height: 2em
+			font-size: 25px
+			color: #000
+			border: 2px solid #000
+			border-radius: 50%
+			&::after
+				font-size: 25px
+			&::focus
+				border: none
+	.navigation
+		position: absolute
+		width: 100%
+		top: 50%
+
+footer
+	min-height: 270px
+	padding: 35px 0
+	color: #fff
+	background-color: #131B40
+
+	.copyright
+		padding: 10px
+		font-size: 14px
+		font-weight: 400
+
+	.social
+		@include social
+		flex-wrap: wrap
+		justify-content: flex-start
+		&__item
+			@include icon
+			width: 2.5em
+			height: 2.5em
+		.vk
+			@include vk
+			img
+				width: 100%
+				height: 100%
+		.instagram
+			@include instagram
+			img
+				width: 100%
+				height: 100%
+				border-radius: 50%
+		.facebook
+			@include facebook
+			img
+				width: 100%
+				height: 100%
+		.ok
+			@include ok
+			img
+				width: 100%
+				height: 100%
+		.telegram
+			@include telegram
+			img
+				width: 100%
+				height: 100%
+		.viber
+			@include viber
+			img
+				width: 100%
+				height: 100%
+
+.footer
+	&__menu
+		padding: 0
+		margin: 0
+		list-style: none
+	&__item
+		padding: 5px 12px
+		a
+			color: #fff
+			text-decoration: none
+

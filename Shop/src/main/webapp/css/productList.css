@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Dec 28, 2018, 6:00:42 PM
+    Author     : Michael_Buranov
+*/
+
+/* Category column */
+.categoryColumn{   
+  float: left;
+  width: 25%;
+}
+
+.categoryNav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.categoryNav a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.categoryNav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Product Column */
+.productColumn {
+  float: left;
+  width: 75%;
+  background-color: #f1f1f1;
+}
+
+.productCard {
+  background-color: white;
+  padding: 20px;
+  margin: 20px 0 0 1%;
+  width: 32%;
+  float: right;  
+  position: relative;  
+}
+
+.productRow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.productCardImgContainer {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  overflow: auto;          
+}        
+
+.productCardImg {
+    max-height:200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;            
+}   
+
+
+
+@media screen and (max-width: 1200px) {
+  .categoryColumn, .productColumn, .productCard  {   
+    width: 100%;
+  }
+  .productCard {
+    margin-left: 0;
+    float: right;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .productCard {
+    float: none;
+    width: 100%;
+  }  
+
+}

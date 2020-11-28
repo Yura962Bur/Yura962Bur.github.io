@@ -1,0 +1,37 @@
+@font-face {
+	font-family: 'GothamPro';
+	src: url('../fonts/gothampro-light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/gothampro-light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/gothampro-light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gothampro-light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/gothampro-light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gothampro-light.svg#gothampro-light') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'GothamPro-Black';
+	src: url('../fonts/gothampro-black.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/gothampro-black.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/gothampro-black.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gothampro-black.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/gothampro-black.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gothampro-black.svg#gothampro-black') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'GothamPro-Bold';
+	src: url('../fonts/gothampro-bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/gothampro-bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/gothampro-bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/gothampro-bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/gothampro-bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/gothampro-bold.svg#gothampro-bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Intro';
+    src: url('../fonts/Intro-Regular.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/Intro-Regular.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/Intro-Regular.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/Intro-Regular.ttf') format('truetype'); /* Chrome < 4, Legacy iOS */
+}

@@ -1,0 +1,261 @@
+@media (max-width: 1280px){
+    .content{
+        max-width: 768px;
+    }
+
+    .header{
+        &-menu{
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        &__phone{
+            width: 30%;
+            a{
+                font-size: 18px;
+            }
+        }
+
+    }
+
+    .footer{
+        &__wrapper{
+            text-align: center;
+            justify-content: center;
+        }
+        &__form{
+            margin-top: 20px;
+        }
+    }
+    
+}
+
+@media (max-width: 1025px){
+    .header {
+        &__logo{
+            display: flex;
+            justify-content: center;
+        }
+
+        &-menu {
+            width: 50%;
+        }
+
+        &__phone{
+            a{
+                font-size: 20px;
+            }
+        }
+
+        &__found {
+            text-align: center;
+        }
+    }
+
+    .footer{
+        &__form{
+            margin-top: 20px;
+            &-row{
+                width: 100%;
+            }
+        }
+
+        &__wrapper {
+            justify-content: center;
+        }
+
+        &__text {
+            text-align: center;
+        }
+
+        .checkbox{
+            display: flex;
+            justify-content: flex-start;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .content{
+        max-width: 440px;
+    }
+    
+    .header {
+        
+        &__top {
+            flex-direction: column;
+        }
+
+        &__logo{
+            img{
+                width: 150px;
+            }
+        }
+
+        &-menu {
+            margin: 40px 0;
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            &__item {
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+
+
+        &__phone{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            a{
+                font-size: 30px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+            &-text{
+                font-size: 30px;
+                line-height: 30px;
+                text-align: center;
+            }
+        }
+    }
+
+    .sorting{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        text-align: center;
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__list{
+            justify-content: space-between;
+            li {
+                flex: 0 0 50%;
+                
+                span {
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    .cats{
+        &__show {
+            padding-top: 43px;
+
+            &-btn {
+                width: 100%;
+                padding: 24px 60px;
+            }
+        }
+
+        &__top {
+            &-btn {
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .footer{
+        &__form{
+            &-row{
+                input{
+                    width: 100%;
+                    &[type='email']{
+                        width: 100%;
+                    }
+                    &[type='button']{
+                        margin: 0;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px){
+    .content{
+        max-width: 300px;
+    }
+
+    .header{
+        &-menu{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            &__item{
+                text-align: center;
+                flex: 0 0 100%;
+            }
+        }
+        &__found {
+            font-size: 28px;
+            line-height: 28px;
+        }
+
+    }
+
+    .sorting{
+        &-dropdown{
+            margin-top: 20px;
+        }
+    }
+
+    .cats{
+        margin: 0;
+        
+        &__item{
+            padding: 0;
+            
+            .discount{
+                left: 20px;
+            }
+
+            .descr{
+                .char{
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: flex-start;
+                    div {
+                        flex: 0 0 50%;
+                        margin-top: 10px;
+                    }
+                } 
+            }
+        }
+    }
+
+    .footer{
+        &__title{
+            font-style: 35px;
+            line-height: 45px;
+        }
+        p{
+            font-size: 25px;
+        }
+
+        &__form{
+            input[type='button']{
+                width: 100%;
+                margin: 16px 0 0 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 300px){
+    .content{
+        max-width: 260px;
+    }
+}

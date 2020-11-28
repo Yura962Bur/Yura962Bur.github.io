@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/ourcss.css">         
+        <link rel="stylesheet" href="css/productDescription.css">  
+        
+        <script src="templateJS.js" type="text/javascript"></script>        
+    </head>
+    <body>
+        <!-- нарисуем шапку и меню -->
+        <script> 
+            header(); 
+            menu('productList'); 
+        </script>
+              
+        <div class="productDescriptionCard">
+                    
+            <div class="row">
+              <h2>70015 GEL LEMONGRASS KERATO Control INTENSIVE</h2>
+              <div class="leftDescriptionColumn" >    
+                <img alt="Фото продукта" style="margin-left:auto; margin-right:auto; display:block;" src="images\product\70010-350x197.png">
+              </div>
+                <div class="rightDescriptionColumn">
+                    <div class="productDescText">
+                        <p>
+                            Назначение: кератолитик интенсивного воздействия для размягчения и растворения рогового слоя огрубевшей кожи стопы с высокой степенью омозолелости. Данный кератолитик эффективен и экономичен, дешевле аналогов,
+                            имеет свежий цитрусовый запах.
+                            Применение:пропитать жидкостью ватный диск и наложить его на места омозолелостей. Оставить на 3-8 минут. Время выдержки от степени гиперкератоза. Для усиления воздействия одеть на ступни полиэтиленовые мешочки. Снять ватные диски салфеткой и обработать размягченную поверхность педикюрной пилкой или фрезой (аппаратные техники). В завершении для восстановления нормального уровня pH кожи и предотвращения ее пересушивания нанести на ватный диск средство "Нейтрализатор универсальный" и бережно протереть им обработанную поверхность.
+                            Мастер должен работать в резиновых перчатках. Не допускать попадания кератолитика на трещины и поврежденные участки кожи.
+                            Состав: вода, гидроксид калия (каустический поташ) – активное размягчающее вещество кератолитика, глицерин –
+                            увлажняющее, антисептическое средство, гидроксиметилцеллюлоза – загуститель, эмульгатор, эфирное масло лемонграсса и лимона – противовоспалительные и противогрибковые средства, феноксиэтанол – антисептическое и
+                            антибактериальное средство, консервант.
+                      </p>
+                    </div>
+                </div>
+            </div>
+            <!-- выведем кнопку "подробнее" -->
+            <br>
+            <form action="productDescription.html">
+               <input type="hidden" name="productId" value="1"> 
+               <button type="submit" class="button">В корзину</button>
+           </form>
+            
+        </div>
+
+        <!-- подвал -->
+        <script>
+            footer();
+        </script>
+    </body>
+</html>

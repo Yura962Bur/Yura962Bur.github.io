@@ -1,0 +1,104 @@
+
+
+
+
+@mixin vk
+    background-color: #4680c2
+    
+    img
+        @include icon
+
+@mixin instagram
+    background-color: #dc3175
+    img
+        @include icon
+
+
+@mixin facebook
+    background-color: #1877f2
+    img
+        @include icon
+
+
+@mixin ok
+    background-color: #ed812b
+    img
+        @include icon
+
+
+@mixin telegram
+    background-color: #08c
+    img
+        @include icon
+
+
+@mixin viber
+    background-color: #7360f2
+    img
+        @include icon
+
+    
+@mixin title
+    font-weight: 700
+    font-size: 40px
+    line-height: 1.2
+
+@mixin submit-button
+    width: 100%
+    min-height: 46px
+    border: none
+    border-radius: 5px
+    color: #343433
+    background: #fff
+    font-weight: 600
+
+@mixin social
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+@mixin social-block
+    &__item
+        @include icon
+        width: 3em
+        height: 3em
+    .vk
+        @include vk
+        img
+            width: 100%
+            height: 100%
+    .instagram
+        @include instagram
+        img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+    .facebook
+        @include facebook
+        img
+            width: 100%
+            height: 100%
+    .ok
+        @include ok
+        img
+            width: 100%
+            height: 100%
+    .telegram
+        @include telegram
+        img
+            width: 100%
+            height: 100%
+    .viber
+        @include viber
+        img
+            width: 100%
+            height: 100%
+
+@mixin icon
+    margin: 5px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 2.5em
+    height: 2.5em
+    border-radius: 50%

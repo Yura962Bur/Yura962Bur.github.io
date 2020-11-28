@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Nail-Академиия</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/basket.css">
+        <script src="templateJS.js" type="text/javascript"></script>           
+    </head>
+    <body>
+        <script> 
+            header(); 
+            menu('basket'); 
+        </script>        
+
+        <div class="headerrow">
+            <div class="itemcolumn"> 
+                <div class="headercard" >
+                    Товар
+                </div>
+            </div>
+            <div class="pricecolumn">
+                <div class="headercard">
+                        Цена
+                </div>
+            </div>
+            <div class="countcolumn">
+                <div class="headercard">
+                    Количество
+                </div>
+            </div>
+            <div class="amountcolumn">
+                <div class="headercard">
+                        Сумма
+                </div>
+            </div>
+            <div class="delcolumn" >
+                <div class="headercard">
+                    Управление
+                </div>
+            </div>
+        </div>     
+
+        
+        <div class="row">
+            <div class="itemcolumn"> 
+                <div class="card" >
+                        70015 GEL LEMONGRASS KERATO Control INTENSIVE
+                </div>
+            </div>
+            <div class="pricecolumn">
+                <div class="card">
+                        170.00
+                </div>
+            </div>
+            <div class="countcolumn">
+                <div class="card" style="text-align: right; padding: 15px 5px 15px 0px;">
+                    <form action="basket.html">
+                       <input type="hidden" name="productId" value="1">
+                       <input type="number" name="itemCount" value="1" style="width:45%; ">
+                       <button type="submit" class="button" style="width:50%;">Пересчитать</button> 
+                   </form>            
+                </div>
+            </div>
+            <div class="amountcolumn">
+                <div class="card">
+                        170.00
+                </div>
+            </div>
+
+            <div class="delcolumn" >
+                <div class="delcard">
+                    <form action="*">
+                       <input type="hidden" name="productId" value="1">
+                       <button type="submit" class="button">Удалить</button>
+                   </form>            
+                </div>
+            </div>
+            
+        </div>     
+            
+
+        <div class="row">
+            <div class="itemcolumn"> 
+                <div class="card" >
+                        70015 GEL LEMONGRASS KERATO Control INTENSIVE
+                </div>
+            </div>
+            <div class="pricecolumn">
+                <div class="card">
+                        170.00
+                </div>
+            </div>
+            <div class="countcolumn">
+                <div class="card" style="text-align: right; padding: 15px 5px 15px 0px;">
+                    <form action="basket.html">
+                       <input type="hidden" name="productId" value="1">
+                       <input type="number" name="itemCount" value="1" style="width:45%; ">
+                       <button type="submit" class="button" style="width:50%;">Пересчитать</button> 
+                   </form>            
+                </div>
+            </div>
+            <div class="amountcolumn">
+                <div class="card">
+                        170.00
+                </div>
+            </div>
+
+            <div class="delcolumn" >
+                <div class="delcard">
+                    <form action="*">
+                       <input type="hidden" name="productId" value="1">
+                       <button type="submit" class="button">Удалить</button>
+                   </form>            
+                </div>
+            </div>
+            
+        </div>     
+
+        <div class="row">
+            <div class="card" style="">
+                <form action="*">
+                    Сумма: 3000 руб                    
+                   <input type="hidden" name="productId" value="1">
+                   <button type="submit" class="button" style="float: right;">Подтвердить заказ</button>
+               </form>                     
+            </div>
+        </div>
+        
+        <script>
+            footer();
+        </script>         
+    </body>
+</html>

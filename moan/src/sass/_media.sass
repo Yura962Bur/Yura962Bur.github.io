@@ -1,0 +1,267 @@
+
+@media (max-width: 575px)
+    header
+        min-height: 90px
+        top: -1px
+        .logo
+            position: absolute
+            top: 0
+            width: 50%
+            height: 100%
+
+        .social
+            display: none
+        .info
+            display: none
+
+        .menu
+            position: absolute
+            top: -300%
+            transition: all .8s
+            height: 100%
+            width: 100%
+            background: rgba(19, 27, 64, 0.6)
+            display: flex
+            flex-direction: column
+            z-index: 10
+            &__active
+                position: fixed
+                top: 0
+                left: 0
+                transition: all .8s
+
+        .nav
+            &-item
+                width: 100%
+                text-align: center
+                padding: 10px
+                font-size: 20px
+
+
+        
+        .hamburger
+            display: block
+            position: absolute
+            right: 20px
+            top: 30px
+            transform: translateY(-50%)
+            width: 40px
+            height: 10px
+            z-index: 20
+            span
+                display: block
+                height: 2px
+                width: 100%
+                background-color: #fff
+                margin: 5px 0
+                transition: 0.5 all
+            &_active
+                span 
+                    margin-bottom: -2px
+                    &:nth-child(1)
+                        transform: translateY(7px) rotate(-45deg)
+                    &:nth-child(2)
+                        display: none
+                    &:nth-child(3)
+                        transform: translateY(3px) rotate(45deg)
+
+    
+    .promo
+        &__wrapper
+            padding: 90px 0 0 0
+        .title
+            font-size: 35px  
+        .science
+            &__wrapper
+                padding: 20px 0px
+            &__item
+                justify-content: flex-start
+        .expert
+            &__wrapper
+                padding: 20px 0px
+
+    
+    .registration
+        &__wrapper
+            padding: 40px 0 80
+        .prereg
+            &__title
+                font-size: 25px
+            &__wrapper
+                padding: 15px 0
+        
+        .actions
+            &__wrapper
+                padding: 40px 0 0
+            &__title
+                font-size: 25px
+
+    .membership
+        .info
+            .title
+                font-size: 25px
+            &__wrapper
+                padding: 30px
+        .quote
+            &__author
+                .round
+                    width: 40px
+                    height: 40px
+
+    .choice
+        &__wrapper
+            padding: 40px 0
+        .title
+            font-size: 28px
+            text-align: center
+
+    .questions
+        &__title
+            font-size: 30px
+            line-height: 1
+        &__subtitle
+            padding: 10px 0 20px
+            font-size: 20px
+	
+    
+    footer
+        .copyright
+            padding: 10px
+        .social
+            @include social
+            flex-wrap: wrap
+            justify-content: center
+            &__item
+                padding: 0
+    
+        .footer__menu
+            padding: 10px 0
+        .footer__item
+            text-align: center
+
+@media (min-width: 576px) and (max-width: 1024px)
+    header
+        .nav-link
+            padding: .5rem
+            font-size: 13px
+        .social
+            display: flex
+            justify-content: center
+            &__item
+                margin: 2px
+                width: 2em
+                height: 2em
+            .vk, .instagram, .facebook, .ok, .telegram, .viber
+                img
+                    width: 2em
+                    height: 2em
+        .info
+            font-size: 13px
+    
+    .promo
+        &__wrapper
+            padding: 134px 0px 30px 0px
+        .title
+            font-size: 25px
+        &__subtitle
+            margin: 0 0 30px 0
+            font-size: 20px
+        .subscribe
+            padding: 25px
+            &__descr
+                font-size: 12px
+            .label
+                font-size: 13px
+            &__submit
+                min-height: 30px
+                font-size: 13px
+            
+        .science
+            &__title
+                font-size: 18px
+            &__item
+                font-size: 14px
+                .round
+                    margin-left: 5px
+                .descr
+                    span
+                      font-size: 13px  
+        .expert
+            &__title
+                font-size: 18px
+            &__item
+                font-size: 14px
+                .round
+                    margin-left: 5px
+                .descr
+                    span
+                      font-size: 13px  
+
+    .registration
+        .actions__btn
+            font-size: 15px
+    
+    .membership
+        .info
+            margin-top: 0
+            .descr
+                font-size: 15px
+        .quote
+            &__quotation
+                font-size: 22px
+    
+    .gallery
+        &__item
+            width: 230px
+            height: 180px
+            margin: 0 0 10px 0
+            .descr
+                p
+                    font-size: 11px
+
+    .president
+        .info
+            .title
+                font-size: 25px
+            .subtitle
+                font-size: 15px
+            .descr
+                font-size: 12px
+
+    .choice
+        .title
+            font-size: 30px
+        &__title
+            font-size: 18px
+        .round
+            width: 4em
+            height: 4em
+            img
+                width: 2em
+                height: 2em
+        .descr
+            p
+                font-size: 12px
+        
+    .questions
+        &__title
+            font-size: 35px
+        &__subtitle
+            padding: 0px 0 20px
+            font-size: 22px
+        .question
+            &__spoiler
+                .title
+                    font-size: 16px
+            &__descr
+                padding: 0 0 20px
+    
+    .swiper
+        &-slide
+            margin: 0px auto
+            padding: 0 65px
+            display: flex
+            justify-content: center
+            align-items: center
+            img
+                width: 100%

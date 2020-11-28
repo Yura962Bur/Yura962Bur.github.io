@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/Shop">
+  <!-- 
+        тут описано как определить dataSource https://wiki.apache.org/tomcat/UsingDataSources и потом его использовать
+        
+        ранее использовался код в Util.java: 
+        
+        private static final String DB_DRIVER="com.microsoft.sqlserver.jdbc.SQLServerDriver";
+        private static final String DB_URL="jdbc:sqlserver://127.0.0.1:1433;databaseName=Internet_shop";
+        private static final String DB_USERNAME="sa";
+        private static final String DB_PASSWORD="SUMERqft58q"; 
+        Class.forName(DB_DRIVER);
+        conn=DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+        System.out.println("Connection OK");          
+    
+    -->
+  <Resource auth="Container" driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver" maxActive="2" name="jdbc/shop_DB" password="SUMERqft58q" type="javax.sql.DataSource" url="jdbc:sqlserver://127.0.0.1;DatabaseName=Internet_shop;SelectMethod=cursor;" username="sa"/>
+</Context>
